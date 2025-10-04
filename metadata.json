@@ -1,0 +1,5 @@
+{
+  "name": "Quy Animation",
+  "description": "An application that allows users to create consistent cartoon character images using the Gemini AI. Users can upload reference images for characters and backgrounds, provide a text prompt, and generate new scenes.",
+  "requestFramePermissions": []
+}
