@@ -50,7 +50,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ images, isLoading, error 
             return (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {Array.from({ length: 4 }).map((_, index) => (
-                        <div key={index} className="aspect-square bg-gray-700/50 rounded-lg animate-pulse"></div>
+                        <div key={index} className="aspect-video bg-gray-700/50 rounded-lg animate-pulse"></div>
                     ))}
                 </div>
             );
@@ -69,7 +69,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ images, isLoading, error 
             return (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {images.map((img, index) => (
-                        <div key={index} className="group relative aspect-square rounded-lg overflow-hidden bg-gray-700">
+                        <div key={index} className="group relative aspect-video rounded-lg overflow-hidden bg-gray-700">
                             <img src={`data:image/png;base64,${img}`} alt={`Generated image ${index + 1}`} className="w-full h-full object-cover"/>
                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                                 <button

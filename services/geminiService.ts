@@ -38,11 +38,11 @@ export const generateFourImages = async (
         parts.push({ inlineData: { data: img.data, mimeType: img.mimeType } });
     });
 
-    let finalPrompt = `Using the provided character images as a strict reference for style and appearance, create a high-resolution 2K image of them doing the following: "${prompt}".`;
+    let finalPrompt = `Using the provided character images as a strict reference for style and appearance, create a high-resolution 2K image of them doing the following: "${prompt}". The final image must have a 16:9 aspect ratio.`;
 
     if (useBackground && background) {
         parts.push({ inlineData: { data: background.data, mimeType: background.mimeType } });
-        finalPrompt = `Using the provided background image as the exact background, and using the provided character images as a strict reference for style and appearance, create a high-resolution 2K image of the characters doing the following: "${prompt}". Do not change the background.`;
+        finalPrompt = `Using the provided background image as the exact background, and using the provided character images as a strict reference for style and appearance, create a high-resolution 2K image of the characters doing the following: "${prompt}". Do not change the background. The final image must have a 16:9 aspect ratio.`;
     }
 
     parts.push({ text: finalPrompt });
